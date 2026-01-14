@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import streamlit as st
-import geopandas as gpd  # <-- you need this for GeoDataFrame
+import geopandas as gpd  
 
 st.title("Maps")
 
@@ -15,12 +15,12 @@ st.title("Maps")
 # Load data
 # ----------------------------
 df = pd.read_csv(
-    "HedleyP_database_20140708.xls",  # (your filename)
+    "HedleyP_database_20140708.xls",  
     encoding="latin1",
     header=25,
 )
 
-# --- Compute labile_pi (same logic as your notebook/script) ---
+# --- Compute labile_pi---
 df["labile_pi"] = -9999
 mask = (df["Resin_Pi"] != -9999) & (df["Bicarbonate_Pi"] != -9999)
 df.loc[mask, "labile_pi"] = df.loc[mask, "Resin_Pi"] + df.loc[mask, "Bicarbonate_Pi"]
