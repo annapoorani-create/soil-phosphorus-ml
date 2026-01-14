@@ -13,7 +13,7 @@ df = pd.read_csv(
     header=25,
 )
 
-# --- Compute labile_pi (same logic as your notebook/script) ---
+# --- Compute labile_pi---
 df["labile_pi"] = -9999
 mask = (df["Resin_Pi"] != -9999) & (df["Bicarbonate_Pi"] != -9999)
 df.loc[mask, "labile_pi"] = df.loc[mask, "Resin_Pi"] + df.loc[mask, "Bicarbonate_Pi"]
