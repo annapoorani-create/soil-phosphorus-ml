@@ -5,3 +5,10 @@ numpy
 matplotlib
 seaborn
 geopandas
+geodatasets
+pyogrio
+shapely
+fiona
+pyproj
+openpyxl
+xlrd
