@@ -6,7 +6,7 @@ import seaborn as sns
 import streamlit as st
 
 df = pd.read_csv(
-    'HedleyP_database_20140708.xls',
+    'HedleyP_database_20140708 (1).xls',
     encoding='latin1',
     header=25,
 )
